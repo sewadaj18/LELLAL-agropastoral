@@ -1,0 +1,394 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Principal -->
+  <title>Actualités — Nouvelles & informations | LELLAL AGROPASTORAL</title>
+  <meta name="description" content="Toutes les actualités de LELLAL AGROPASTORAL : nouvelles de l'élevage, production, WAT CATTLE FOOD, coopérative LELLAL MAROBE NEÏ, formations et événements agropastoraux." />
+  <meta name="keywords" content="actualités LELLAL AGROPASTORAL, nouvelles élevage, actualité agropastorale, WAT CATTLE FOOD actualité, LELLAL MAROBE NEÏ nouvelles" />
+  <meta name="author" content="LELLAL AGROPASTORAL" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.lelalagropastoral.com/pages/actualites.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.lelalagropastoral.com/pages/actualites.html" />
+  <meta property="og:title" content="Actualités — LELLAL AGROPASTORAL" />
+  <meta property="og:description" content="Les dernières nouvelles et informations de LELLAL AGROPASTORAL et de ses structures associées." />
+  <meta property="og:image" content="https://www.lelalagropastoral.com/images/og-image.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="LELLAL AGROPASTORAL" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Actualités — LELLAL AGROPASTORAL" />
+  <meta name="twitter:description" content="Les dernières nouvelles et informations de LELLAL AGROPASTORAL." />
+  <meta name="twitter:image" content="https://www.lelalagropastoral.com/images/og-image.jpg" />
+
+  <!-- Schema.org — Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Actualités LELLAL AGROPASTORAL",
+    "url": "https://www.lelalagropastoral.com/pages/actualites.html",
+    "publisher": {
+      "@type": "Organization",
+      "name": "LELLAL AGROPASTORAL",
+      "url": "https://www.lelalagropastoral.com"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .actualites-page { padding: 80px 0; background: var(--blanc); }
+    .actu-layout {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 40px;
+    }
+    .actu-main-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+    .actu-card {
+      background: var(--blanc);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px var(--ombre);
+      border: 1px solid var(--gris-border);
+      transition: all var(--transition);
+    }
+    .actu-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 14px 40px var(--ombre);
+      border-color: var(--vert-accent);
+    }
+    .actu-card.featured {
+      grid-column: span 2;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr;
+    }
+    .actu-card-img {
+      height: 180px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 3rem;
+    }
+    .actu-card.featured .actu-card-img { height: 100%; min-height: 200px; font-size: 4.5rem; }
+    .actu-card-body { padding: 22px; }
+    .actu-card-meta {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+      flex-wrap: wrap;
+    }
+    .actu-card-meta .date { font-size: 0.78rem; color: var(--or); font-weight: 600; }
+    .actu-card-body h3 { font-size: 1rem; font-weight: 700; color: var(--vert-fonce); margin-bottom: 8px; line-height: 1.4; }
+    .actu-card.featured .actu-card-body h3 { font-size: 1.3rem; }
+    .actu-card-body p { font-size: 0.88rem; color: var(--gris-texte); line-height: 1.65; margin-bottom: 12px; }
+    .read-more {
+      color: var(--vert-clair);
+      font-size: 0.85rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: gap var(--transition), color var(--transition);
+    }
+    .read-more:hover { gap: 8px; color: var(--or); }
+    .sidebar-widget {
+      background: var(--gris-clair);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 24px;
+    }
+    .sidebar-widget h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--vert-fonce);
+      margin-bottom: 16px;
+      padding-bottom: 8px;
+      border-bottom: 2px solid var(--vert-accent);
+    }
+    .sidebar-actu-item {
+      display: flex;
+      gap: 12px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--gris-border);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+    .sidebar-actu-item:last-child { border-bottom: none; }
+    .sidebar-actu-item:hover { transform: translateX(4px); }
+    .sidebar-actu-thumb {
+      width: 52px;
+      height: 52px;
+      border-radius: 8px;
+      background: var(--vert-pale);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.4rem;
+      flex-shrink: 0;
+    }
+    .sidebar-actu-text .date { font-size: 0.72rem; color: var(--or); font-weight: 600; }
+    .sidebar-actu-text p { font-size: 0.85rem; color: var(--vert-fonce); font-weight: 600; line-height: 1.35; margin-top: 2px; }
+    .categories-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--gris-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.9rem;
+      color: var(--gris-texte);
+      cursor: pointer;
+      transition: color var(--transition);
+    }
+    .categories-list li:hover { color: var(--vert-clair); }
+    .categories-list li .count {
+      background: var(--vert-pale);
+      color: var(--vert-fonce);
+      padding: 2px 8px;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    @media(max-width:1024px) {
+      .actu-layout { grid-template-columns: 1fr; }
+    }
+    @media(max-width:768px) {
+      .actu-main-grid { grid-template-columns: 1fr; }
+      .actu-card.featured { grid-column: span 1; display: block; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../images/logo.png" alt="LELLAL AGROPASTORAL" onerror="this.style.display='none'" />
+        <div class="nav-logo-text">
+          <span class="brand">LELLAL AGROPASTORAL</span>
+          <span class="tagline">Élevage · Agriculture · Innovation</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="activites.html">Nos activités</a></li>
+        <li class="nav-special"><a href="wat-cattle-food.html">WAT CATTLE FOOD</a></li>
+        <li class="nav-special"><a href="lelal-maro-bene.html">LELLAL MAROBE NEÏ</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="actualites.html" class="active">Actualités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Actualités</h1>
+    <p>Les dernières nouvelles, événements et informations de LELLAL AGROPASTORAL</p>
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Actualités</span>
+    </div>
+  </div>
+
+  <section class="actualites-page">
+    <div class="container">
+      <div class="actu-layout">
+        <!-- Articles principaux -->
+        <div>
+          <div class="actu-main-grid">
+
+            <div class="actu-card featured fade-up">
+              <div class="actu-card-img" style="background:linear-gradient(135deg,var(--vert-fonce),var(--vert-clair));">🌿</div>
+              <div class="actu-card-body">
+                <div class="actu-card-meta">
+                  <span class="tag">Institutionnel</span>
+                  <span class="date"><i class="fas fa-calendar"></i> Octobre 2026</span>
+                </div>
+                <h3>Lancement du site web officiel de LELLAL AGROPASTORAL</h3>
+                <p>LELLAL AGROPASTORAL franchit une nouvelle étape avec la mise en ligne de son site web institutionnel, vitrine de ses activités et de ses structures associées WAT CATTLE FOOD et LELLAL MAROBE NEÏ. Ce site reflète notre engagement vers une communication moderne et transparente.</p>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="actu-card fade-up">
+              <div class="actu-card-img" style="background:linear-gradient(135deg,#2d6a4f,#52b788);">🐄</div>
+              <div class="actu-card-body">
+                <div class="actu-card-meta">
+                  <span class="tag">Élevage</span>
+                  <span class="date"><i class="fas fa-calendar"></i> Sept. 2026</span>
+                </div>
+                <h3>Extension du parc d'élevage bovin</h3>
+                <p>Augmentation de la capacité d'accueil avec l'aménagement de nouvelles infrastructures d'élevage pour accroître notre production.</p>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="actu-card fade-up">
+              <div class="actu-card-img" style="background:linear-gradient(135deg,#52b788,#1b4332);">🌾</div>
+              <div class="actu-card-body">
+                <div class="actu-card-meta">
+                  <span class="tag">Production</span>
+                  <span class="date"><i class="fas fa-calendar"></i> Août 2026</span>
+                </div>
+                <h3>Démarrage de la production fourragère</h3>
+                <p>Premières parcelles fourragères en production pour sécuriser l'alimentation du cheptel en saison sèche.</p>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="actu-card fade-up">
+              <div class="actu-card-img" style="background:linear-gradient(135deg,var(--or),#2d6a4f);">🎓</div>
+              <div class="actu-card-body">
+                <div class="actu-card-meta">
+                  <span class="tag">Formation</span>
+                  <span class="date"><i class="fas fa-calendar"></i> Juil. 2026</span>
+                </div>
+                <h3>Formation des éleveurs partenaires</h3>
+                <p>Session de formation pratique à la ferme pilote pour les membres de la coopérative LELLAL MAROBE NEÏ.</p>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="actu-card fade-up">
+              <div class="actu-card-img" style="background:linear-gradient(135deg,#1b4332,#40916c);">🏭</div>
+              <div class="actu-card-body">
+                <div class="actu-card-meta">
+                  <span class="tag">WAT CATTLE FOOD</span>
+                  <span class="date"><i class="fas fa-calendar"></i> Juin 2026</span>
+                </div>
+                <h3>Signature d'un partenariat de distribution</h3>
+                <p>Accord de distribution des aliments WAT CATTLE FOOD avec des partenaires régionaux de la filière.</p>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+            <div class="actu-card fade-up">
+              <div class="actu-card-img" style="background:linear-gradient(135deg,#40916c,var(--or));">🤝</div>
+              <div class="actu-card-body">
+                <div class="actu-card-meta">
+                  <span class="tag">LELLAL MAROBE NEÏ</span>
+                  <span class="date"><i class="fas fa-calendar"></i> Mai 2026</span>
+                </div>
+                <h3>Intégration de nouveaux membres à la coopérative</h3>
+                <p>La coopérative LELLAL MAROBE NEÏ accueille de nouveaux éleveurs et producteurs partenaires dans son réseau.</p>
+                <a href="#" class="read-more">Lire la suite <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+          <div class="sidebar-widget fade-up">
+            <h4><i class="fas fa-fire" style="color:var(--or); margin-right:6px;"></i>Les plus récents</h4>
+            <div class="sidebar-actu-item">
+              <div class="sidebar-actu-thumb">🌿</div>
+              <div class="sidebar-actu-text">
+                <div class="date">Oct. 2026</div>
+                <p>Lancement du site web officiel</p>
+              </div>
+            </div>
+            <div class="sidebar-actu-item">
+              <div class="sidebar-actu-thumb">🐄</div>
+              <div class="sidebar-actu-text">
+                <div class="date">Sept. 2026</div>
+                <p>Extension du parc d'élevage bovin</p>
+              </div>
+            </div>
+            <div class="sidebar-actu-item">
+              <div class="sidebar-actu-thumb">🌾</div>
+              <div class="sidebar-actu-text">
+                <div class="date">Août 2026</div>
+                <p>Démarrage de la production fourragère</p>
+              </div>
+            </div>
+            <div class="sidebar-actu-item">
+              <div class="sidebar-actu-thumb">🎓</div>
+              <div class="sidebar-actu-text">
+                <div class="date">Juil. 2026</div>
+                <p>Formation des éleveurs partenaires</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="sidebar-widget fade-up">
+            <h4><i class="fas fa-tags" style="color:var(--or); margin-right:6px;"></i>Catégories</h4>
+            <ul class="categories-list">
+              <li><span>Élevage & Production</span><span class="count">3</span></li>
+              <li><span>Alimentation animale</span><span class="count">2</span></li>
+              <li><span>WAT CATTLE FOOD</span><span class="count">2</span></li>
+              <li><span>LELLAL MAROBE NEÏ</span><span class="count">2</span></li>
+              <li><span>Formation</span><span class="count">1</span></li>
+              <li><span>Institutionnel</span><span class="count">1</span></li>
+            </ul>
+          </div>
+
+          <div class="sidebar-widget fade-up" style="background:var(--vert-fonce); text-align:center;">
+            <div style="font-size:2rem; margin-bottom:10px;">📧</div>
+            <h4 style="color:var(--blanc); border-color:var(--or);">Newsletter</h4>
+            <p style="font-size:0.88rem; color:rgba(255,255,255,0.75); margin-bottom:14px;">Restez informé des actualités de LELLAL AGROPASTORAL</p>
+            <input type="email" placeholder="Votre email" style="width:100%; padding:10px 14px; border-radius:8px; border:none; margin-bottom:10px; font-size:0.9rem;" />
+            <button class="btn btn-or" style="width:100%;">S'abonner</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <img src="../images/logo.png" alt="LELLAL AGROPASTORAL" onerror="this.style.display='none'" />
+            <span class="brand-name">LELLAL AGROPASTORAL</span>
+          </a>
+          <p>Entreprise agropastorale moderne au service du développement durable de la filière.</p>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul>
+          <li><a href="../index.html">Accueil</a></li>
+          <li><a href="apropos.html">À propos</a></li>
+          <li><a href="activites.html">Activités</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Structures</h4><ul>
+          <li><a href="wat-cattle-food.html">WAT CATTLE FOOD</a></li>
+          <li><a href="lelal-maro-bene.html">LELLAL MAROBE NEÏ</a></li>
+        </ul></div>
+        <div class="footer-col"><h4>Contact</h4>
+          <div class="footer-contact-item"><span class="icon">📞</span><span>+00 00 00 00 00</span></div>
+          <div class="footer-contact-item"><span class="icon">✉️</span><span>contact@lelalagropastoral.com</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 LELLAL AGROPASTORAL. Tous droits réservés.</p>
+        <p><a href="../index.html">www.lelalagropastoral.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-actions">
+    <a href="tel:+00000000000" class="mobile-btn call"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/22893623794" class="mobile-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,364 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Principal -->
+  <title>Nos activités — Élevage, Agriculture, Alimentation animale | LELLAL AGROPASTORAL</title>
+  <meta name="description" content="LELLAL AGROPASTORAL : élevage bovin, ovin, caprin et avicole, production fourragère, alimentation animale, technologies RFID, transformation laitière, formation et ferme pilote." />
+  <meta name="keywords" content="élevage bovin, élevage ovin, aviculture, production fourragère, alimentation animale, provende, RFID élevage, transformation lait, formation éleveurs, ferme pilote agropastorale" />
+  <meta name="author" content="LELLAL AGROPASTORAL" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.lelalagropastoral.com/pages/activites.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.lelalagropastoral.com/pages/activites.html" />
+  <meta property="og:title" content="Nos activités — Élevage, Agriculture & Alimentation animale | LELLAL AGROPASTORAL" />
+  <meta property="og:description" content="Découvrez tous les domaines d'activité de LELLAL AGROPASTORAL : élevage, production agricole, alimentation animale, technologies et formation." />
+  <meta property="og:image" content="https://www.lelalagropastoral.com/images/og-image.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="LELLAL AGROPASTORAL" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Nos activités — LELLAL AGROPASTORAL" />
+  <meta name="twitter:description" content="Élevage, production agricole, alimentation animale, technologies et formation — la chaîne de valeur complète de LELLAL AGROPASTORAL." />
+  <meta name="twitter:image" content="https://www.lelalagropastoral.com/images/og-image.jpg" />
+
+  <!-- Schema.org — Service -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    "name": "Activités de LELLAL AGROPASTORAL",
+    "url": "https://www.lelalagropastoral.com/pages/activites.html",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Élevage & Production animale", "description": "Élevage bovin, ovin, caprin et avicole, embouche, reproduction, production laitière." },
+      { "@type": "ListItem", "position": 2, "name": "Production agricole & fourragère", "description": "Culture de fourrages, production de matières premières pour l'alimentation animale." },
+      { "@type": "ListItem", "position": 3, "name": "Alimentation animale", "description": "Fabrication et commercialisation d'aliments pour animaux via WAT CATTLE FOOD." },
+      { "@type": "ListItem", "position": 4, "name": "Technologies & Traçabilité", "description": "Identification RFID, GPS, logiciels de gestion d'élevage." },
+      { "@type": "ListItem", "position": 5, "name": "Transformation & Commercialisation", "description": "Collecte et transformation du lait, conditionnement, chaîne du froid." },
+      { "@type": "ListItem", "position": 6, "name": "Formation & Ferme pilote", "description": "Formation pratique des éleveurs, démonstration de technologies." }
+    ]
+  }
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .activite-full-section { padding: 90px 0; }
+    .activite-full-section:nth-child(even) { background: var(--gris-clair); }
+    .activite-full-section:nth-child(odd) { background: var(--blanc); }
+    .activite-detail-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.4fr;
+      gap: 60px;
+      align-items: center;
+    }
+    .activite-detail-grid.reverse { direction: rtl; }
+    .activite-detail-grid.reverse > * { direction: ltr; }
+    .activite-visual {
+      border-radius: 16px;
+      height: 340px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 5rem;
+      box-shadow: 0 20px 60px var(--ombre);
+    }
+    .activite-detail-content h2 {
+      font-size: 1.7rem;
+      font-weight: 800;
+      color: var(--vert-fonce);
+      margin-bottom: 0.8rem;
+    }
+    .activite-detail-content h2::after {
+      content: '';
+      display: block;
+      width: 50px;
+      height: 3px;
+      background: var(--or);
+      margin-top: 8px;
+      border-radius: 2px;
+    }
+    .activite-detail-content p {
+      font-size: 1rem;
+      color: var(--gris-texte);
+      margin-bottom: 1rem;
+      line-height: 1.75;
+    }
+    .activite-list { margin-top: 1rem; }
+    .activite-list li {
+      padding: 8px 0 8px 24px;
+      position: relative;
+      font-size: 0.95rem;
+      color: var(--gris-texte);
+      border-bottom: 1px solid var(--gris-border);
+    }
+    .activite-list li::before {
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--vert-clair);
+      font-weight: 700;
+    }
+    .activite-list li:last-child { border-bottom: none; }
+    @media(max-width:768px) {
+      .activite-detail-grid { grid-template-columns: 1fr; }
+      .activite-detail-grid.reverse { direction: ltr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../images/logo.png" alt="LELLAL AGROPASTORAL" onerror="this.style.display='none'" />
+        <div class="nav-logo-text">
+          <span class="brand">LELLAL AGROPASTORAL</span>
+          <span class="tagline">Élevage · Agriculture · Innovation</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="activites.html" class="active">Nos activités</a></li>
+        <li class="nav-special"><a href="wat-cattle-food.html">WAT CATTLE FOOD</a></li>
+        <li class="nav-special"><a href="lelal-maro-bene.html">LELLAL MAROBE NEÏ</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <h1>Nos Domaines d'Activité</h1>
+    <p>Une chaîne de valeur agropastorale complète, de l'élevage à la commercialisation</p>
+    <div class="breadcrumb">
+      <a href="../index.html">Accueil</a>
+      <span>/</span>
+      <span>Nos activités</span>
+    </div>
+  </div>
+
+  <!-- 1. Élevage -->
+  <section class="activite-full-section" id="elevage">
+    <div class="container">
+      <div class="activite-detail-grid">
+        <div class="activite-visual" style="padding:0; overflow:hidden;">
+            <img src="../images/photo-02.jpeg" alt="Élevage bovin LELLAL AGROPASTORAL" style="width:100%; height:340px; object-fit:cover; border-radius:16px; box-shadow:0 20px 60px var(--ombre);" />
+          </div>
+        <div class="activite-detail-content fade-up">
+          <h2>Élevage & Production animale</h2>
+          <p>Notre cœur de métier est l'élevage intégré. Nous pratiquons un élevage responsable et performant couvrant plusieurs espèces animales, avec un suivi rigoureux des performances zootechniques.</p>
+          <ul class="activite-list">
+            <li>Élevage bovin, ovin, caprin et avicole</li>
+            <li>Embouche et engraissement des bovins</li>
+            <li>Reproduction et sélection génétique</li>
+            <li>Production laitière</li>
+            <li>Achat, vente et commercialisation d'animaux</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. Production agricole -->
+  <section class="activite-full-section" id="agriculture">
+    <div class="container">
+      <div class="activite-detail-grid reverse">
+        <div class="activite-visual" style="padding:0; overflow:hidden;">
+            <img src="../images/fourrage-01.jpg" alt="Culture fourragère LELLAL AGROPASTORAL" style="width:100%; height:340px; object-fit:cover; border-radius:16px; box-shadow:0 20px 60px var(--ombre);" />
+          </div>
+        <div class="activite-detail-content fade-up">
+          <h2>Production agricole & fourragère</h2>
+          <p>La production fourragère est le socle alimentaire de nos élevages. Nous cultivons et stockons des fourrages de qualité pour garantir une alimentation optimale du cheptel, notamment en saison sèche.</p>
+          <ul class="activite-list">
+            <li>Culture et production de fourrages</li>
+            <li>Production de matières premières pour l'alimentation animale</li>
+            <li>Valorisation des sous-produits agricoles</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Alimentation animale -->
+  <section class="activite-full-section" id="alimentation">
+    <div class="container">
+      <div class="activite-detail-grid">
+        <div class="activite-visual" style="padding:0; overflow:hidden;">
+            <img src="../images/photo-08.jpeg" alt="Infrastructures ferme LELLAL AGROPASTORAL" style="width:100%; height:340px; object-fit:cover; border-radius:16px; box-shadow:0 20px 60px var(--ombre);" />
+          </div>
+        <div class="activite-detail-content fade-up">
+          <h2>Alimentation animale</h2>
+          <p>Via notre structure WAT CATTLE FOOD, nous produisons et commercialisons des aliments pour animaux adaptés aux besoins nutritionnels de chaque espèce et stade d'élevage.</p>
+          <ul class="activite-list">
+            <li>Fabrication et commercialisation d'aliments composés</li>
+            <li>Formulation de concentrés nutritionnels</li>
+            <li>Achat, importation et distribution de matières premières</li>
+            <li>Prémix et compléments autorisés</li>
+          </ul>
+          <a href="wat-cattle-food.html" class="btn btn-primary" style="margin-top:1.5rem;">Voir WAT CATTLE FOOD</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Technologies -->
+  <section class="activite-full-section" id="technologies">
+    <div class="container">
+      <div class="activite-detail-grid reverse">
+        <div class="activite-visual" style="padding:0; overflow:hidden;">
+            <img src="../images/photo-01.jpeg" alt="Couloir de contention bovin" style="width:100%; height:340px; object-fit:cover; border-radius:16px; box-shadow:0 20px 60px var(--ombre);" />
+          </div>
+        <div class="activite-detail-content fade-up">
+          <h2>Technologies & Traçabilité</h2>
+          <p>Nous intégrons des technologies modernes d'identification et de gestion pour améliorer la traçabilité des animaux, optimiser les performances d'élevage et faciliter la prise de décision.</p>
+          <ul class="activite-list">
+            <li>Identification et traçabilité des animaux (RFID)</li>
+            <li>Géolocalisation GPS</li>
+            <li>Systèmes de pesée automatisés</li>
+            <li>Logiciels de gestion d'élevage</li>
+            <li>Collecte et traitement de données zootechniques</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Transformation -->
+  <section class="activite-full-section" id="transformation">
+    <div class="container">
+      <div class="activite-detail-grid">
+        <div class="activite-visual" style="padding:0; overflow:hidden;">
+            <img src="../images/photo-09.jpeg" alt="Troupeau bovin sous les arbres" style="width:100%; height:340px; object-fit:cover; border-radius:16px; box-shadow:0 20px 60px var(--ombre);" />
+          </div>
+        <div class="activite-detail-content fade-up">
+          <h2>Transformation & Commercialisation</h2>
+          <p>La valorisation de nos productions passe par des activités de transformation et de commercialisation qui permettent d'offrir des produits de qualité aux consommateurs et aux partenaires.</p>
+          <ul class="activite-list">
+            <li>Collecte et transformation du lait</li>
+            <li>Conditionnement et commercialisation des produits d'élevage</li>
+            <li>Stockage et gestion de la chaîne du froid</li>
+            <li>Transformation des productions agricoles et animales</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Environnement -->
+  <section class="activite-full-section" id="environnement">
+    <div class="container">
+      <div class="activite-detail-grid reverse">
+        <div class="activite-visual" style="padding:0; overflow:hidden;">
+            <img src="../images/photo-03.jpeg" alt="Ferme pilote LELLAL AGROPASTORAL" style="width:100%; height:340px; object-fit:cover; border-radius:16px; box-shadow:0 20px 60px var(--ombre);" />
+          </div>
+        <div class="activite-detail-content fade-up">
+          <h2>Environnement & Durabilité</h2>
+          <p>L'approche environnementale est au cœur de notre modèle. Nous valorisons les déchets organiques, pratiquons le compostage et intégrons les énergies renouvelables dans notre fonctionnement.</p>
+          <ul class="activite-list">
+            <li>Compostage et valorisation du fumier</li>
+            <li>Valorisation des déchets organiques</li>
+            <li>Production agricole bio-intégrée</li>
+            <li>Utilisation d'énergies renouvelables</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 7. Formation -->
+  <section class="activite-full-section" id="formation">
+    <div class="container">
+      <div class="activite-detail-grid">
+        <div class="activite-visual" style="padding:0; overflow:hidden;">
+            <img src="../images/photo-06.jpeg" alt="Vue d'ensemble ferme LELLAL AGROPASTORAL" style="width:100%; height:340px; object-fit:cover; border-radius:16px; box-shadow:0 20px 60px var(--ombre);" />
+          </div>
+        <div class="activite-detail-content fade-up">
+          <h2>Formation & Ferme pilote</h2>
+          <p>Notre ferme pilote est un espace dédié à la formation pratique et à l'expérimentation. Elle accueille des éleveurs, des étudiants et des partenaires pour démontrer les meilleures pratiques d'élevage moderne.</p>
+          <ul class="activite-list">
+            <li>Formation pratique des éleveurs</li>
+            <li>Démonstration de technologies d'élevage</li>
+            <li>Expérimentation de méthodes d'alimentation</li>
+            <li>Suivi des performances zootechniques</li>
+            <li>Développement et exploitation de la ferme pilote</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Commerce -->
+  <section class="activite-full-section" id="commerce">
+    <div class="container">
+      <div class="activite-detail-grid reverse">
+        <div class="activite-visual" style="background: linear-gradient(135deg, #52b788, var(--or));">🌍</div>
+        <div class="activite-detail-content fade-up">
+          <h2>Commerce & Distribution</h2>
+          <p>LELLAL AGROPASTORAL développe également des activités commerciales liées à l'importation, l'exportation et la distribution d'équipements et de matériels agropastoraux.</p>
+          <ul class="activite-list">
+            <li>Importation et exportation d'équipements agropastoraux</li>
+            <li>Représentation commerciale</li>
+            <li>Distribution de produits et matériels</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <img src="../images/logo.png" alt="LELLAL AGROPASTORAL" onerror="this.style.display='none'" />
+            <span class="brand-name">LELLAL AGROPASTORAL</span>
+          </a>
+          <p>Entreprise agropastorale moderne, intégrant élevage, production agricole, alimentation animale et technologies pour un développement durable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="activites.html">Nos activités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Structures</h4>
+          <ul>
+            <li><a href="wat-cattle-food.html">WAT CATTLE FOOD</a></li>
+            <li><a href="lelal-maro-bene.html">LELLAL MAROBE NEÏ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><span class="icon">📞</span><span>+00 00 00 00 00</span></div>
+          <div class="footer-contact-item"><span class="icon">✉️</span><span>contact@lelalagropastoral.com</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 LELLAL AGROPASTORAL. Tous droits réservés.</p>
+        <p><a href="../index.html">www.lelalagropastoral.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-actions">
+    <a href="tel:+00000000000" class="mobile-btn call"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/22893623794" class="mobile-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

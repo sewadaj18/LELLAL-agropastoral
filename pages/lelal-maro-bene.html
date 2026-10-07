@@ -1,0 +1,322 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO Principal -->
+  <title>LELLAL MAROBE NEÏ — Coopérative agropastorale | LELLAL AGROPASTORAL</title>
+  <meta name="description" content="LELLAL MAROBE NEÏ est la coopérative agropastorale de LELLAL AGROPASTORAL. Rejoignez le réseau de producteurs pour mutualiser les ressources, accéder aux marchés et renforcer la filière." />
+  <meta name="keywords" content="LELLAL MAROBE NEÏ, coopérative agropastorale, coopérative éleveurs, mutualisation ressources, accès marchés agricoles, coopérative agricole" />
+  <meta name="author" content="LELLAL AGROPASTORAL" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.lelalagropastoral.com/pages/lelal-maro-bene.html" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.lelalagropastoral.com/pages/lelal-maro-bene.html" />
+  <meta property="og:title" content="LELLAL MAROBE NEÏ — Coopérative agropastorale" />
+  <meta property="og:description" content="Rejoignez la coopérative LELLAL MAROBE NEÏ pour mutualiser les ressources, accéder aux marchés et renforcer la filière agropastorale." />
+  <meta property="og:image" content="https://www.lelalagropastoral.com/images/og-image.jpg" />
+  <meta property="og:locale" content="fr_FR" />
+  <meta property="og:site_name" content="LELLAL AGROPASTORAL" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="LELLAL MAROBE NEÏ — Coopérative agropastorale" />
+  <meta name="twitter:description" content="Rejoignez la coopérative LELLAL MAROBE NEÏ et bénéficiez de la force du collectif pour développer votre activité." />
+  <meta name="twitter:image" content="https://www.lelalagropastoral.com/images/og-image.jpg" />
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LELLAL MAROBE NEÏ",
+    "url": "https://www.lelalagropastoral.com/pages/lelal-maro-bene.html",
+    "description": "Coopérative agropastorale dédiée à l'organisation collective des producteurs et éleveurs.",
+    "parentOrganization": {
+      "@type": "Organization",
+      "name": "LELLAL AGROPASTORAL",
+      "url": "https://www.lelalagropastoral.com"
+    }
+  }
+  </script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <style>
+    .lmb-hero {
+      min-height: 60vh;
+      background: linear-gradient(135deg, var(--vert-fonce) 0%, var(--vert-moyen) 60%, var(--vert-accent) 100%);
+      display: flex;
+      align-items: center;
+      padding: 140px 5% 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .lmb-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255,255,255,0.15);
+      color: var(--or-clair);
+      padding: 6px 16px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 1.5rem;
+      border: 1px solid rgba(255,255,255,0.25);
+    }
+    .lmb-hero h1 {
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 900;
+      color: var(--blanc);
+      margin-bottom: 0.5rem;
+    }
+    .lmb-hero h1 span { color: var(--or-clair); }
+    .lmb-hero .subtitle {
+      font-size: 1.1rem;
+      color: rgba(255,255,255,0.8);
+      margin-bottom: 2rem;
+      max-width: 550px;
+    }
+    .avantages-section { padding: 80px 0; background: var(--blanc); }
+    .avantages-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 2rem;
+    }
+    .avantage-card {
+      border-radius: 14px;
+      padding: 32px 24px;
+      background: var(--vert-pale);
+      border-left: 4px solid var(--vert-clair);
+      transition: transform var(--transition);
+    }
+    .avantage-card:hover { transform: translateY(-4px); }
+    .avantage-card .icon { font-size: 2rem; margin-bottom: 12px; }
+    .avantage-card h3 { font-size: 1rem; font-weight: 700; color: var(--vert-fonce); margin-bottom: 8px; }
+    .avantage-card p { font-size: 0.9rem; color: var(--gris-texte); line-height: 1.7; }
+    .adherents-section { padding: 80px 0; background: var(--gris-clair); }
+    .rejoindre-section {
+      padding: 80px 0;
+      background: linear-gradient(135deg, var(--vert-fonce), var(--vert-clair));
+      text-align: center;
+    }
+    .rejoindre-section h2 { color: var(--blanc); font-size: 2rem; margin-bottom: 1rem; }
+    .rejoindre-section p { color: rgba(255,255,255,0.8); font-size: 1.05rem; margin-bottom: 2rem; max-width: 500px; margin-left: auto; margin-right: auto; }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 2rem;
+    }
+    .step-card {
+      background: var(--blanc);
+      border-radius: 14px;
+      padding: 28px 22px;
+      text-align: center;
+      box-shadow: 0 4px 20px var(--ombre);
+    }
+    .step-num {
+      width: 48px;
+      height: 48px;
+      background: var(--vert-clair);
+      color: var(--blanc);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      font-weight: 800;
+      margin: 0 auto 14px;
+    }
+    .step-card h4 { font-size: 0.95rem; font-weight: 700; color: var(--vert-fonce); margin-bottom: 8px; }
+    .step-card p { font-size: 0.87rem; color: var(--gris-texte); line-height: 1.6; }
+    @media(max-width:768px) {
+      .avantages-grid { grid-template-columns: 1fr; }
+      .steps-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="../index.html" class="nav-logo">
+        <img src="../images/logo.png" alt="LELLAL AGROPASTORAL" onerror="this.style.display='none'" />
+        <div class="nav-logo-text">
+          <span class="brand">LELLAL AGROPASTORAL</span>
+          <span class="tagline">Élevage · Agriculture · Innovation</span>
+        </div>
+      </a>
+      <ul class="nav-menu">
+        <li><a href="../index.html">Accueil</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="activites.html">Nos activités</a></li>
+        <li class="nav-special"><a href="wat-cattle-food.html">WAT CATTLE FOOD</a></li>
+        <li class="nav-special"><a href="lelal-maro-bene.html" class="active">LELLAL MAROBE NEÏ</a></li>
+        <li><a href="projets.html">Projets</a></li>
+        <li><a href="actualites.html">Actualités</a></li>
+        <li><a href="galerie.html">Galerie</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="lmb-hero">
+    <div>
+      <div class="lmb-badge">
+        <i class="fas fa-hands-helping"></i> Structure associée de LELLAL AGROPASTORAL
+      </div>
+      <h1>LELAL <span>MARO-BENE</span></h1>
+      <p class="subtitle">Coopérative agropastorale — Unir les producteurs pour un développement collectif, durable et performant.</p>
+      <div style="display:flex; gap:16px; flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-primary">Nous rejoindre</a>
+        <a href="#avantages" class="btn btn-outline">Les avantages</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRÉSENTATION -->
+  <section style="padding:80px 0; background:var(--blanc);">
+    <div class="container">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;">
+        <div class="fade-up" style="background:linear-gradient(135deg,var(--vert-clair),var(--vert-fonce)); border-radius:16px; height:380px; display:flex; align-items:center; justify-content:center; font-size:6rem; box-shadow:0 20px 60px var(--ombre);">🤝</div>
+        <div class="fade-up">
+          <h2 class="section-title">La coopérative LELLAL MAROBE NEÏ</h2>
+          <p style="margin-bottom:1rem;">LELLAL MAROBE NEÏ est la coopérative créée sous l'égide de LELLAL AGROPASTORAL pour fédérer les producteurs et les éleveurs autour d'objectifs communs de développement.</p>
+          <p style="margin-bottom:1rem;">Son rôle est d'organiser les membres, de mutualiser les ressources, de faciliter l'accès aux intrants, aux marchés et aux formations, et de renforcer la capacité collective de la filière agropastorale.</p>
+          <p>La coopérative est un maillon essentiel du développement inclusif et durable que LELLAL AGROPASTORAL entend promouvoir à l'échelle locale et régionale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AVANTAGES -->
+  <section class="avantages-section" id="avantages">
+    <div class="container">
+      <h2 class="section-title center fade-up">Les avantages de la coopérative</h2>
+      <p class="section-subtitle center fade-up">Ce que l'adhésion apporte concrètement à chaque membre</p>
+      <div class="avantages-grid">
+        <div class="avantage-card fade-up">
+          <div class="icon">🌾</div>
+          <h3>Accès aux intrants</h3>
+          <p>Approvisionnement groupé en aliments, matériels et intrants à des conditions préférentielles grâce au volume collectif.</p>
+        </div>
+        <div class="avantage-card fade-up">
+          <div class="icon">📊</div>
+          <h3>Accès aux marchés</h3>
+          <p>Mise en relation avec des acheteurs, des transformateurs et des distributeurs pour une meilleure valorisation des productions.</p>
+        </div>
+        <div class="avantage-card fade-up">
+          <div class="icon">🎓</div>
+          <h3>Formation & Accompagnement</h3>
+          <p>Accès aux sessions de formation pratique à la ferme pilote et à l'accompagnement technique de LELLAL AGROPASTORAL.</p>
+        </div>
+        <div class="avantage-card fade-up">
+          <div class="icon">🔗</div>
+          <h3>Mutualisation des ressources</h3>
+          <p>Partage d'équipements, de savoir-faire et d'informations pour réduire les coûts individuels et améliorer les rendements.</p>
+        </div>
+        <div class="avantage-card fade-up">
+          <div class="icon">🛡️</div>
+          <h3>Sécurisation des revenus</h3>
+          <p>Stabilisation des revenus grâce à l'accès à des débouchés commerciaux stables et à des prix négociés collectivement.</p>
+        </div>
+        <div class="avantage-card fade-up">
+          <div class="icon">🌍</div>
+          <h3>Développement durable</h3>
+          <p>Engagement collectif vers des pratiques durables, respectueuses de l'environnement et de la biodiversité locale.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMMENT REJOINDRE -->
+  <section style="padding:80px 0; background:var(--gris-clair);">
+    <div class="container">
+      <h2 class="section-title center fade-up">Comment nous rejoindre ?</h2>
+      <p class="section-subtitle center fade-up">Un processus simple pour intégrer la coopérative LELLAL MAROBE NEÏ</p>
+      <div class="steps-grid">
+        <div class="step-card fade-up">
+          <div class="step-num">1</div>
+          <h4>Prendre contact</h4>
+          <p>Contactez-nous par téléphone, WhatsApp ou via notre formulaire de contact pour manifester votre intérêt.</p>
+        </div>
+        <div class="step-card fade-up">
+          <div class="step-num">2</div>
+          <h4>Entretien & validation</h4>
+          <p>Un échange avec notre équipe pour présenter vos activités et valider votre éligibilité à l'adhésion.</p>
+        </div>
+        <div class="step-card fade-up">
+          <div class="step-num">3</div>
+          <h4>Adhésion & intégration</h4>
+          <p>Formalisation de l'adhésion et intégration dans le réseau de la coopérative avec accès à tous les avantages.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA REJOINDRE -->
+  <section class="rejoindre-section">
+    <div class="container">
+      <h2>Rejoignez LELLAL MAROBE NEÏ</h2>
+      <p>Vous êtes éleveur, producteur ou acteur de la filière agropastorale ? Rejoignez notre coopérative et bénéficiez de la force du collectif.</p>
+      <a href="contact.html" class="btn btn-or" style="font-size:1rem; padding:14px 36px;">Nous contacter pour adhérer</a>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="../index.html" class="brand-logo">
+            <img src="../images/logo.png" alt="LELLAL AGROPASTORAL" onerror="this.style.display='none'" />
+            <span class="brand-name">LELLAL AGROPASTORAL</span>
+          </a>
+          <p>LELLAL MAROBE NEÏ est la coopérative agropastorale de LELLAL AGROPASTORAL, dédiée au développement collectif et durable des producteurs.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
+            <li><a href="../index.html">Accueil LELAL</a></li>
+            <li><a href="apropos.html">À propos</a></li>
+            <li><a href="activites.html">Nos activités</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Structures</h4>
+          <ul>
+            <li><a href="wat-cattle-food.html">WAT CATTLE FOOD</a></li>
+            <li><a href="lelal-maro-bene.html">LELLAL MAROBE NEÏ</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="footer-contact-item"><span class="icon">📞</span><span>+00 00 00 00 00</span></div>
+          <div class="footer-contact-item"><span class="icon">✉️</span><span>contact@lelalagropastoral.com</span></div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 LELLAL AGROPASTORAL — LELLAL MAROBE NEÏ. Tous droits réservés.</p>
+        <p><a href="../index.html">www.lelalagropastoral.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <div class="mobile-actions">
+    <a href="tel:+00000000000" class="mobile-btn call"><i class="fas fa-phone"></i></a>
+    <a href="https://wa.me/22893623794" class="mobile-btn whatsapp" target="_blank"><i class="fab fa-whatsapp"></i></a>
+  </div>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>
