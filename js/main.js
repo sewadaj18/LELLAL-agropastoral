@@ -21,29 +21,50 @@ document.addEventListener('DOMContentLoaded', function () {
   const navMenu = document.querySelector('.nav-menu');
 
   if (hamburger && navMenu) {
+    // Créer un overlay sombre derrière le menu
+    var navOverlay = document.createElement('div');
+    navOverlay.className = 'nav-overlay';
+    document.body.appendChild(navOverlay);
+
+    function openMenu() {
+      navMenu.classList.add('open');
+      navOverlay.classList.add('open');
+      document.body.style.overflow = 'hidden';
+      var spans = hamburger.querySelectorAll('span');
+      spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
+      spans[1].style.opacity = '0';
+      spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+    }
+
+    function closeMenu() {
+      navMenu.classList.remove('open');
+      navOverlay.classList.remove('open');
+      document.body.style.overflow = '';
+      var spans = hamburger.querySelectorAll('span');
+      spans[0].style.transform = '';
+      spans[1].style.opacity = '';
+      spans[2].style.transform = '';
+    }
+
     hamburger.addEventListener('click', function () {
-      navMenu.classList.toggle('open');
-      const spans = hamburger.querySelectorAll('span');
       if (navMenu.classList.contains('open')) {
-        spans[0].style.transform = 'rotate(45deg) translate(5px, 5px)';
-        spans[1].style.opacity = '0';
-        spans[2].style.transform = 'rotate(-45deg) translate(5px, -5px)';
+        closeMenu();
       } else {
-        spans[0].style.transform = '';
-        spans[1].style.opacity = '';
-        spans[2].style.transform = '';
+        openMenu();
       }
     });
 
-    // Fermer le menu au clic sur un lien
+    // Fermer au clic sur un lien
     navMenu.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        navMenu.classList.remove('open');
-        hamburger.querySelectorAll('span').forEach(function (s) {
-          s.style.transform = '';
-          s.style.opacity = '';
-        });
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    // Fermer au clic sur l'overlay
+    navOverlay.addEventListener('click', closeMenu);
+
+    // Fermer avec la touche Échap
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape') closeMenu();
     });
   }
 
